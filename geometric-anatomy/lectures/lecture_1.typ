@@ -32,7 +32,7 @@ We can build new propositions from given ones using _logical operators_.
     |  F  |  F  |      F    |    F     | ... |        T             |           T            |
   ]
 
-  The principal that anything can be implied (#sym.arrow.r.double) goes by the latin _ex falso quod libet_.
+  The principal that anything can be implied from a false statement (#sym.arrow.r.double) goes by the latin _ex falso quod libet_.
 
 #theorem[
   $ (p arrow.r.double q) arrow.l.r.double ((not q) arrow.r.double (not p)) $
