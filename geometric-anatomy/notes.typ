@@ -43,3 +43,4 @@ For example, we often appeal to geometric intuition for classical mechanics and 
 
 #include "lectures/lecture_1.typ"
 #include "lectures/lecture_2.typ"
+#include "lectures/lecture_3.typ"

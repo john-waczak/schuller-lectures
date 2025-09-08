@@ -15,6 +15,14 @@
   stroke: rgb("#275096") + 1pt,
 )
 
+#let axiom = thmbox(
+  "axiom",
+  "Axiom",
+  fill: rgb("#dda3ff"),
+  stroke: rgb("#5e0691") + 1pt,
+)
+
+
 #let corollary = thmplain(
   "corollary",
   "Corollary",
@@ -80,6 +88,19 @@
 
   // Quotation settings
   set quote(block: true)
+
+  // Equation settings
+  show heading.where(level: 1): it => {
+    // Reset the equation counter to 0 for each new section
+    counter(math.equation).update(0)
+    // Return the original heading element
+    it
+  }
+  set math.equation(numbering: n => {
+    let heading_count = counter(heading).get() // list of [heading, sub-heading] counts
+    let eqn_num = (heading_count + (n,)).map(str).join(".") // add equation count to list and join
+    eqn_num
+  })
 
   // Title and author block
   align(left)[
